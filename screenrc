@@ -1,0 +1,11 @@
+startup_message off
+screen -t "development"
+screen -t "remote"
+screen -t "serial"
+screen -t "serial2"
+screen -t "man"
+screen -t "misc"
+#termcapinfo xterm*|rxvt*|kterm*|Eterm* 'hs:ts=\E]0;:fs=\007:ds=\E]0;\007'
+#defhstatus "screen ^E (^Et) | $USER@^EH"
+termcapinfo xterm* ti@:te@
+altscreen on
