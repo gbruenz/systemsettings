@@ -1,0 +1,27 @@
+[user]
+	name = Tobias Schmidl
+	email = T.Schmidl@erhardt-leimer.com
+	signingkey = 0xa1554441
+[gui]
+	fontdiff = -family \"Source Code Pro\" -size 9 -weight normal -slant roman -underline 0 -overstrike 0
+	fontui = -family \"DejaVu Sans\" -size 9 -weight normal -slant roman -underline 0 -overstrike 0
+	spellingdictionary = en
+[alias]
+	st = status
+	ci = commit
+	di = diff
+	wdi = diff --color-words
+	co = checkout
+	up = fetch --all
+[color]
+	ui = auto
+[core]
+	excludesfile = /home/schtobia/.gitignore
+[push]
+	default = upstream
+[branch "master"]
+	rebase = true
+[pull]
+	rebase = true
+[diff]
+	renames = 1
