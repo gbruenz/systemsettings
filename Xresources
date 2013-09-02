@@ -23,7 +23,7 @@ URxvt*.bolditalicFont:  xft:Source Code Pro:bold:italic:size=9
 URxvt*.letterSpace:     -1
 URxvt*.perl-ext-common: default,matcher
 ! this setting assumes that the current browser is set correctly via update-alternatives
-URxvt*.url-launcher:    /usr/bin/www-browser
+URxvt*.url-launcher:    /usr/bin/x-www-browser
 URxvt*.matcher.button:  1
 URxvt*.urgentOnBell:    true
 URxvt*.saveLines:       65535
