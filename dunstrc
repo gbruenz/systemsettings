@@ -1,5 +1,5 @@
 [global]
-    font = Monospace 8
+    font = Source Code Pro 9
 
     # allow a small subset of html markup:
     # <b>bold</b>
@@ -121,7 +121,7 @@
     dmenu = /usr/bin/dmenu -p dunst:
 
     # browser for opening urls in context menu
-    browser = /usr/bin/firefox -new-tab
+    browser = /usr/bin/x-www-browser -new-tab
 
 [frame]
     width = 3
