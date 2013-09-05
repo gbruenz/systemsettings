@@ -21,12 +21,13 @@ URxvt*.boldFont:        xft:Source Code Pro:bold:size=9
 URxvt*.italicfont:      xft:Source Code Pro:italic:size=9
 URxvt*.bolditalicFont:  xft:Source Code Pro:bold:italic:size=9
 URxvt*.letterSpace:     -1
-URxvt*.perl-ext-common: default,matcher
+URxvt*.perl-ext-common: default,matcher,bell-command
 ! this setting assumes that the current browser is set correctly via update-alternatives
 URxvt*.url-launcher:    /usr/bin/x-www-browser
 URxvt*.matcher.button:  1
 URxvt*.urgentOnBell:    true
 URxvt*.saveLines:       65535
+URxvt.bell-command:     notify-send "Bell rang" "The bell rang in URxvt"
 
 
 ! Xft settings ---------------------------------------------------------------
