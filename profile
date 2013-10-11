@@ -20,3 +20,5 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
+[[ -f "$HOME/bin/set_environ.sh" ]] && . "$HOME/bin/set_environ.sh";
