@@ -43,22 +43,20 @@
 
 ! URxvt settings -------------------------------------------------------------
 
-UXTerm*faceName: xft:Source Code Pro
-UXTerm*faceSize: 9
-URxvt*.depth:           32
-URxvt*.scrollBar:       false
-URxvt*.font:            xft:Source Code Pro:size=9
-URxvt*.boldFont:        xft:Source Code Pro:bold:size=9
-URxvt*.italicfont:      xft:Source Code Pro:italic:size=9
-URxvt*.bolditalicFont:  xft:Source Code Pro:bold:italic:size=9
-URxvt*.letterSpace:     -1
-URxvt*.perl-ext-common: default,matcher,bell-command
+URxvt*depth:           32
+URxvt*scrollBar:       false
+URxvt*font:            xft:Source Code Pro:size=9
+URxvt*boldFont:        xft:Source Code Pro:bold:size=9
+URxvt*italicfont:      xft:Source Code Pro:italic:size=9
+URxvt*bolditalicFont:  xft:Source Code Pro:bold:italic:size=9
+URxvt*letterSpace:     -1
+URxvt*perl-ext-common: default,matcher,bell-command
 ! this setting assumes that the current browser is set correctly via update-alternatives
-URxvt*.url-launcher:    /usr/bin/x-www-browser
-URxvt*.matcher.button:  1
-URxvt*.urgentOnBell:    true
-URxvt*.saveLines:       65535
-URxvt*.bell-command:     notify-send "Bell rang" "The bell rang in URxvt"
+URxvt*url-launcher:    /usr/bin/x-www-browser
+URxvt*matcher.button:  1
+URxvt*urgentOnBell:    true
+URxvt*saveLines:       65535
+URxvt*bell-command:     notify-send "Bell rang" "The bell rang in URxvt"
 
 URxvt*background:              S_base03
 URxvt*foreground:              S_base0
@@ -88,24 +86,32 @@ URxvt*color15:                 S_base3
 
 ! Xft settings ---------------------------------------------------------------
 
-Xft.dpi:        96
-Xft.antialias:  true
-Xft.rgba:       rgb
-Xft.hinting:    true
-Xft.hintstyle:  hintfull
-Xft.lcdfilter:  lcddefault
+Xft*dpi:        96
+Xft*antialias:  true
+Xft*rgba:       rgb
+Xft*hinting:    true
+Xft*hintstyle:  hintfull
+Xft*lcdfilter:  lcddefault
 
 
 ! xscreensaver ---------------------------------------------------------------
 
 !font settings
-xscreensaver.Dialog.headingFont: xft:DejaVu Sans:style=Bold:size=14
-xscreensaver.Dialog.bodyFont:    xft:DejaVu Sans:size=12
-xscreensaver.Dialog.labelFont:   xft:DejaVu Sans:size=12
-xscreensaver.Dialog.unameFont:   xft:DejaVu Sans:size=12
-xscreensaver.Dialog.buttonFont:  xft:DejaVu Sans:style=Bold:size=12
-xscreensaver.Dialog.dateFont:    xft:DejaVu Sans:size=12
-xscreensaver.passwd.passwdFont:  xft:DejaVu Sans:style=Bold:size=12
+! xscreensaver*Dialog.headingFont: xft:DejaVu Sans:style=Bold:size=14
+! xscreensaver*Dialog.bodyFont:    xft:DejaVu Sans:size=12
+! xscreensaver*Dialog.labelFont:   xft:DejaVu Sans:size=12
+! xscreensaver*Dialog.unameFont:   xft:DejaVu Sans:size=12
+! xscreensaver*Dialog.buttonFont:  xft:DejaVu Sans:style=Bold:size=12
+! xscreensaver*Dialog.dateFont:    xft:DejaVu Sans:size=12
+! xscreensaver*passwd.passwdFont:  xft:DejaVu Sans:style=Bold:size=12
+!use old style xfont notation, since xscreensaver is really that dumb
+xscreensaver*Dialog.headingFont: -*-dejavu sans-bold-r-*--12-*-*-*-*-*-*-*
+xscreensaver*Dialog.bodyFont: -*-dejavu sans-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver*Dialog.labelFont: -*-dejavu sans-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver*Dialog.unameFont: -*-dejavu sans-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver*Dialog.buttonFont: -*-dejavu sans-bold-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver*Dialog.dateFont: -*-dejavu sans-medium-r-*-*-12-*-*-*-*-*-*-*
+xscreensaver*passwd.passwdFont: -*-dejavu sans-bold-r-*-*-12-*-*-*-*-*-*-*
 
 
 ! xclock ---------------------------------------------------------------------
@@ -116,49 +122,68 @@ xclock*Foreground:        S_base0
 xclock*background:        S_base03
 
 
-!xcalc-----------------------------------------------------------------------
+! xcalc ----------------------------------------------------------------------
 
 xcalc*geometry:                        200x275
-xcalc.ti.bevel.background:             #111111
-xcalc.ti.bevel.screen.background:      #000000
-xcalc.ti.bevel.screen.DEG.background:  #000000
-xcalc.ti.bevel.screen.DEG.foreground:  LightSeaGreen
-xcalc.ti.bevel.screen.GRAD.background: #000000
-xcalc.ti.bevel.screen.GRAD.foreground: LightSeaGreen
-xcalc.ti.bevel.screen.RAD.background:  #000000
-xcalc.ti.bevel.screen.RAD.foreground:  LightSeaGreen
-xcalc.ti.bevel.screen.INV.background:  #000000
-xcalc.ti.bevel.screen.INV.foreground:  Red
-xcalc.ti.bevel.screen.LCD.background:  #000000
-xcalc.ti.bevel.screen.LCD.foreground:  LightSeaGreen
-xcalc.ti.bevel.screen.LCD.shadowWidth: 0
-xcalc.ti.bevel.screen.M.background:    #000000
-xcalc.ti.bevel.screen.M.foreground:    LightSeaGreen
-xcalc.ti.bevel.screen.P.background:    #000000
-xcalc.ti.bevel.screen.P.foreground:    Yellow
-xcalc.ti.Command.foreground:  White
-xcalc.ti.Command.background:  #777777
-xcalc.ti.button5.background:  Orange3
-xcalc.ti.button19.background: #611161
-xcalc.ti.button18.background: #611161
-xcalc.ti.button20.background: #611111
+XCalc*ti.bevel.background:             #111111
+XCalc*ti.bevel.screen.background:      #000000
+XCalc*ti.bevel.screen.DEG.background:  #000000
+XCalc*ti.bevel.screen.DEG.foreground:  LightSeaGreen
+XCalc*ti.bevel.screen.GRAD.background: #000000
+XCalc*ti.bevel.screen.GRAD.foreground: LightSeaGreen
+XCalc*ti.bevel.screen.RAD.background:  #000000
+XCalc*ti.bevel.screen.RAD.foreground:  LightSeaGreen
+XCalc*ti.bevel.screen.INV.background:  #000000
+XCalc*ti.bevel.screen.INV.foreground:  Red
+XCalc*ti.bevel.screen.LCD.background:  #000000
+XCalc*ti.bevel.screen.LCD.foreground:  LightSeaGreen
+XCalc*ti.bevel.screen.LCD.shadowWidth: 0
+XCalc*ti.bevel.screen.M.background:    #000000
+XCalc*ti.bevel.screen.M.foreground:    LightSeaGreen
+XCalc*ti.bevel.screen.P.background:    #000000
+XCalc*ti.bevel.screen.P.foreground:    Yellow
+XCalc*ti.Command.foreground:  White
+XCalc*ti.Command.background:  #777777
+XCalc*ti.button5.background:  Orange3
+XCalc*ti.button19.background: #611161
+XCalc*ti.button18.background: #611161
+XCalc*ti.button20.background: #611111
 !uncomment to change label on division button
-!xcalc.ti.button20.label:      /
-xcalc.ti.button25.background: #722222
-xcalc.ti.button30.background: #833333
-xcalc.ti.button35.background: #944444
-xcalc.ti.button40.background: #a55555
-xcalc.ti.button22.background: #222262
-xcalc.ti.button23.background: #222262
-xcalc.ti.button24.background: #222272
-xcalc.ti.button27.background: #333373
-xcalc.ti.button28.background: #333373
-xcalc.ti.button29.background: #333373
-xcalc.ti.button32.background: #444484
-xcalc.ti.button33.background: #444484
-xcalc.ti.button34.background: #444484
-xcalc.ti.button37.background: #555595
-xcalc.ti.button38.background: #555595
-xcalc.ti.button39.background: #555595
+!XCalc*ti.button20.label:      /
+XCalc*ti.button25.background: #722222
+XCalc*ti.button30.background: #833333
+XCalc*ti.button35.background: #944444
+XCalc*ti.button40.background: #a55555
+XCalc*ti.button22.background: #222262
+XCalc*ti.button23.background: #222262
+XCalc*ti.button24.background: #222272
+XCalc*ti.button27.background: #333373
+XCalc*ti.button28.background: #333373
+XCalc*ti.button29.background: #333373
+XCalc*ti.button32.background: #444484
+XCalc*ti.button33.background: #444484
+XCalc*ti.button34.background: #444484
+XCalc*ti.button37.background: #555595
+XCalc*ti.button38.background: #555595
+XCalc*ti.button39.background: #555595
 XCalc*Cursor:                 hand2
 XCalc*ShapeStyle:             rectangle
+
+
+! xterm ----------------------------------------------------------------------
+
+XTerm*faceName:     Source Code Pro
+XTerm*faceSize:     9
+XTerm*bellIsUrgent: true
+XTerm*reverseVideo: true
+XTerm*menuLocale:   ""
+XTerm*renderFont:   true
+
+! uxterm ---------------------------------------------------------------------
+
+UXTerm*faceName:     Source Code Pro
+UXTerm*faceSize:     9
+UXTerm*bellIsUrgent: true
+UXTerm*reverseVideo: true
+UXTerm*menuLocale:   ""
+UXTerm*renderFont:   true
