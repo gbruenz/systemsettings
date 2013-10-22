@@ -30,25 +30,27 @@ set $mod Mod4
 # font for window titles. ISO 10646 = Unicode
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 font xft:Source Code Pro 9
-# font xft:DejaVu Sans Mono 9
-# font --terminus-medium-r-normal--14-------iso10646-1
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# enable floating specific apps
+for_window [title="Calculator"] floating enable; border normal
+for_window [title="Remmina Remote Desktop Client"] floating enable; border normal
+
 # lock screen
-# bindsym $mod+l exec xautolock -locknow
 bindsym $mod+l exec xscreensaver-command -lock
 
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
-# start kate
-bindsym $mod+k exec kate -u
+# start editor
+bindsym $mod+p exec leafpad
 
-# start dolphin
-# bindsym $mod+e exec dolphin
+# start filebrowser
+bindsym $mod+e exec thunar
+
 
 # start gvim
 bindsym $mod+g exec gvim
@@ -60,9 +62,9 @@ bindsym Print exec ksnapshot
 bindsym Shift+Print exec ksnapshot -c
 
 # music control
-bindsym $mod+p exec clementine --play-pause
-bindsym $mod+i exec clementine --show-osd
-bindsym $mod+n exec clementine --next
+#bindsym $mod+p exec clementine --play-pause
+#bindsym $mod+i exec clementine --show-osd
+#bindsym $mod+n exec clementine --next
 
 # kill focused window
 bindsym $mod+Shift+Q kill
@@ -108,7 +110,7 @@ bindsym $mod+f fullscreen
 # change container layout (stacked, tabbed, default)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+e layout default
+#bindsym $mod+e layout default
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -200,9 +202,22 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        #output xinerama-0
-        tray_output xinerama-0
+        output xinerama-0
+	tray_output xinerama-0
+        position top
+	mode hide
+	hidden_state hide
+}
+
+bar {
+        output xinerama-1
+        tray_output xinerama-1
         status_command i3status
         position top
 }
-exec startup.sh
+
+exec --no-startup-id i3-msg 'workspace 1; exec xfce4-terminal --fullscreen --hide-menubar -e byobu'
+exec --no-startup-id i3-msg 'workspace 2; exec remmina'
+exec --no-startup-id i3-msg 'workspace 4; exec iceweasel'
+
+exec /home/gert/bin/startup.sh
