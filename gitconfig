@@ -1,7 +1,6 @@
 [user]
-	name = Tobias Schmidl
-	email = T.Schmidl@erhardt-leimer.com
-	signingkey = 0xa1554441
+	name = Gert Bruenz
+	email = g.bruenz@erhardt-leimer.com
 [gui]
 	fontdiff = -family \"Source Code Pro\" -size 9 -weight normal -slant roman -underline 0 -overstrike 0
 	fontui = -family \"DejaVu Sans\" -size 9 -weight normal -slant roman -underline 0 -overstrike 0
@@ -16,7 +15,7 @@
 [color]
 	ui = auto
 [core]
-	excludesfile = /home/schtobia/.gitignore
+	excludesfile = /home/gert/.gitignore
 [push]
 	default = upstream
 [branch "master"]
