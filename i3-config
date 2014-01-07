@@ -46,11 +46,13 @@ bindsym $mod+l exec xscreensaver-command -lock
 bindsym $mod+Return exec i3-sensible-terminal
 
 # start editor
-bindsym $mod+p exec leafpad
+bindsym $mod+p exec mousepad
 
 # start filebrowser
 bindsym $mod+e exec thunar
 
+# start calculator
+bindsym $mod+c exec gnome-calculator
 
 # start gvim
 bindsym $mod+g exec gvim
@@ -203,17 +205,16 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         output xinerama-0
-	tray_output xinerama-0
+        tray_output xinerama-0
+        status_command i3status
+        position top
+}
+bar {
+        output xinerama-1
+	tray_output xinerama-1
         position top
 	mode hide
 	hidden_state hide
-}
-
-bar {
-        output xinerama-1
-        tray_output xinerama-1
-        status_command i3status
-        position top
 }
 
 exec --no-startup-id i3-msg 'workspace 1; exec xfce4-terminal --fullscreen --hide-menubar -e byobu'

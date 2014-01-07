@@ -1,6 +1,7 @@
+execute pathogen#infect()
 syntax enable
 let g:solarized_hitrail=1
-" let g:solarized_termcolors=256
+let g:solarized_termcolors=256
 colorscheme solarized
 set background=dark
 let load_doxygen_syntax = 1

@@ -38,3 +38,4 @@ alias ssh-add-all='for a in .ssh/id_*; do ssh-add $a; done;'
 alias screen='screen -RU'
 xmlformat () { xmllint --format "$1" | unexpand -t 2 --first-only; }
 alias jjar='java -jar'
+alias ifc='sudo ifconfig -a'
