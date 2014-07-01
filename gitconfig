@@ -14,6 +14,7 @@
 	br = branch	
 	up = fetch --all
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	undo-commit = reset --soft HEAD^
 [color]
 	ui = auto
 [core]
