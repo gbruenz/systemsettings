@@ -22,7 +22,7 @@ alias bz2c='bzip2 --best'
 alias xzc='xz --best --extreme'
 
 alias apt-update='sudo apt-get update'
-alias apt-upgrade='sudo aptitude dist-upgrade'
+alias apt-upgrade='sudo aptitude safe-upgrade'
 alias apt-autoremove='sudo apt-get --purge autoremove'
 alias apt-autoclean='sudo apt-get autoclean'
 alias update-system='apt-update && sudo aptitude -y -s dist-upgrade'
