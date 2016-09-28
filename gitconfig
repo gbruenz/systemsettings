@@ -1,6 +1,14 @@
 [user]
-	name = Gert Bruenz
+	name = Gert Brünz
 	email = g.bruenz@erhardt-leimer.com
+
+[credential "https://elagit.els.local"]
+	username = bruenzge
+
+[credential]
+#	helper = cache --timeout 28800
+        helper = store
+        
 [gui]
 	fontdiff = -family \"Source Code Pro\" -size 9 -weight normal -slant roman -underline 0 -overstrike 0
 	fontui = -family \"DejaVu Sans\" -size 9 -weight normal -slant roman -underline 0 -overstrike 0
@@ -15,10 +23,14 @@
 	up = fetch --all
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	undo-commit = reset --soft HEAD^
+	subst = submodule status 
+	subup = submodule update --recursive 
 [color]
 	ui = auto
 [core]
 	excludesfile = /home/gert/.gitignore
+	preloadindex = true
+	editor = kate
 [push]
 	default = upstream
 [branch "master"]
@@ -26,4 +38,9 @@
 [pull]
 	rebase = true
 [diff]
-	renames = 1
+	renames = copies
+	
+[http]
+	sslVerify = true
+[merge]
+	conflictstyle = diff3
