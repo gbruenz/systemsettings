@@ -1,0 +1,18 @@
+cd $HOME
+nohup xset s off &
+#nohup /usr/lib/notification-daemon/notification-daemon &
+#nohup unagi &
+#nohup /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+#nohup glipper &
+#nohup xfce4-clipman &
+nohup bluedevil-monolithic &
+nohup nm-applet &
+nohup xscreensaver -nosplash &
+#nohup loffice --quickstart --nologo &
+#nohup dunst &
+#nohup find "$HOME/Mountpoints/Home" 2>&1 >/dev/null &
+xsetroot -solid black
+#. .fehbg
+i3-msg restart
+#nohup xscreensaver-command -lock &
+#set_environ.sh

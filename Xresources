@@ -40,15 +40,15 @@
 ! #define S_base2         #073642
 ! #define S_base3         #002b36
 
+! Xcursor settings -----------------------------------------------------------
+
+Xcursor.theme: DMZ-Black
 
 ! URxvt settings -------------------------------------------------------------
 
 URxvt.depth:           32
-URxvt.scrollBar:       false
-URxvt.font:            xft:Source Code Pro:size=9
-URxvt.boldFont:        xft:Source Code Pro:bold:size=9
-URxvt.italicfont:      xft:Source Code Pro:italic:size=9
-URxvt.bolditalicFont:  xft:Source Code Pro:bold:italic:size=9
+URxvt*scrollBar:       false
+URxvt*scrollBar_right: false
 URxvt.letterSpace:     -1
 URxvt.perl-ext-common: default,matcher,bell-command
 ! this setting assumes that the current browser is set correctly via update-alternatives
@@ -58,30 +58,76 @@ URxvt.urgentOnBell:    true
 URxvt.saveLines:       65535
 URxvt.bell-command:    notify-send "Bell rang" "The bell rang in URxvt"
 
+! URxvt fonts
+
+!URxvt*font: 	       xft:DejaVu Sans Mono:size=11
+!URxvt*boldFont:        xft:DejaVu Sans Mono:bold:size=11
+!URxvt*italicFont:      xft:DejaVu Sans Mono:italic:size=11
+!URxvt*bolditalicFont:  xft:DejaVu Sans Mono:bold:italic:size=11
+URxvt.font:            xft:Source Code Pro:size=10
+URxvt.boldFont:        xft:Source Code Pro:bold:size=10
+URxvt.italicfont:      xft:Source Code Pro:italic:size=10
+URxvt.bolditalicFont:  xft:Source Code Pro:bold:italic:size=10
+
+! URxvt my colors
+
+URxvt*transparent: true
+URxvt*tintColor: DarkBlue
+URxvt*foreground: DarkGray
+URxvt*background: Blue
+URxvt*color4: RoyalBlue
+URxvt*color12: RoyalBlue
+
+
 ! URxvt with solarized colors
-URxvt.background:             S_base03
-URxvt.foreground:             S_base0
-URxvt.fading:                 40
-URxvt.fadeColor:              S_base03
-URxvt.cursorColor:            S_base1
-URxvt.pointerColorBackground: S_base01
-URxvt.pointerColorForeground: S_base1
-URxvt.color0:                 S_base02
-URxvt.color1:                 S_red
-URxvt.color2:                 S_green
-URxvt.color3:                 S_yellow
-URxvt.color4:                 S_blue
-URxvt.color5:                 S_magenta
-URxvt.color6:                 S_cyan
-URxvt.color7:                 S_base2
-URxvt.color9:                 S_orange
-URxvt.color8:                 S_base03
-URxvt.color10:                S_base01
-URxvt.color11:                S_base00
-URxvt.color12:                S_base0
-URxvt.color13:                S_violet
-URxvt.color14:                S_base1
-URxvt.color15:                S_base3
+!URxvt.background:             S_base03
+!URxvt.foreground:             S_base0
+!URxvt.fading:                 40
+!URxvt.fadeColor:              S_base03
+!URxvt.cursorColor:            S_base1
+!URxvt.pointerColorBackground: S_base01
+!URxvt.pointerColorForeground: S_base1
+!URxvt.color0:                 S_base02
+!URxvt.color1:                 S_red
+!URxvt.color2:                 S_green
+!URxvt.color3:                 S_yellow
+!URxvt.color4:                 S_blue
+!URxvt.color5:                 S_magenta
+!URxvt.color6:                 S_cyan
+!URxvt.color7:                 S_base2
+!URxvt.color9:                 S_orange
+!URxvt.color8:                 S_base03
+!URxvt.color10:                S_base01
+!URxvt.color11:                S_base00
+!URxvt.color12:                S_base0
+!URxvt.color13:                S_violet
+!URxvt.color14:                S_base1
+!URxvt.color15:                S_base3
+
+! URxvt keybindings
+! Normal
+URxvt*keysym.Home:            \033OH
+URxvt*keysym.End:             \033OF
+!URxvt*keysym.F1:              \033OP
+!URxvt*keysym.F2:              \033OQ
+!URxvt*keysym.F3:              \033OR
+!URxvt*keysym.F4:              \033OS
+! Shift
+*URxvt*keysym.S-Page_Up:	\033[5;2~
+*URxvt*keysym.S-Page_Down:	\033[6;2~
+
+URxvt*keysym.S-F1:		\033[1;2P
+URxvt*keysym.S-F2:		\033[1;2Q
+URxvt*keysym.S-F3:		\033[1;2R
+URxvt*keysym.S-F4:		\033[1;2S
+URxvt*keysym.S-F5:		\033[15;2~
+URxvt*keysym.S-F6:		\033[17;2~
+URxvt*keysym.S-F7:		\033[18;2~
+URxvt*keysym.S-F8:		\033[19;2~
+URxvt*keysym.S-F9:		\033[20;2~
+URxvt*keysym.S-F10:		\033[21;2~
+URxvt*keysym.S-F11:		\033[23;2~
+URxvt*keysym.S-F12:		\033[24;2~
 
 
 ! Xft settings ---------------------------------------------------------------
@@ -96,6 +142,9 @@ Xft.render:    true
 
 
 ! xscreensaver ---------------------------------------------------------------
+
+xscreensaver.logFile:/var/log/xscreensaver.log
+xscreensaver.verbose:true
 
 xscreensaver.splash: false
 !xscreensaver.Dialog.headingFont: xft:Source Code Pro:style=Bold:size=16
