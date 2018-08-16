@@ -80,5 +80,11 @@ source $HOME/.bash_aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+setopt SH_WORD_SPLIT
+
 bindkey "^[[5~" history-beginning-search-backward
 bindkey "^[[6~" history-beginning-search-forward
+
+source ~/lib/git-subrepo/.rc
+fpath=('~/lib/git-subrepo/share/zsh-completion' $fpath)
+

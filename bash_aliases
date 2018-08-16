@@ -1,9 +1,11 @@
+#enable sudo aliases
+alias sudo='sudo '
+
 alias ..='cd ../'
 alias .2='cd ../../'
 alias .3='cd ../../../'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../../'
-
 
 alias ls='ls --color=auto'
 alias dir='dir --color=auto'
@@ -46,6 +48,8 @@ alias ifc='sudo ifconfig -a'
 alias ping='sudo ping'
 alias wol='wakeonlan -f ~/.wol_macaddr'
 alias gg='gitg &'
+
+alias dmesg='sudo dmesg'
 
 alias p='ptxdist'
 alias pg='ptxdist go'

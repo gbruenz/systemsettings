@@ -60,14 +60,14 @@ URxvt.bell-command:    notify-send "Bell rang" "The bell rang in URxvt"
 
 ! URxvt fonts
 
-!URxvt*font: 	       xft:DejaVu Sans Mono:size=11
-!URxvt*boldFont:        xft:DejaVu Sans Mono:bold:size=11
-!URxvt*italicFont:      xft:DejaVu Sans Mono:italic:size=11
-!URxvt*bolditalicFont:  xft:DejaVu Sans Mono:bold:italic:size=11
-URxvt.font:            xft:Source Code Pro:size=10
-URxvt.boldFont:        xft:Source Code Pro:bold:size=10
-URxvt.italicfont:      xft:Source Code Pro:italic:size=10
-URxvt.bolditalicFont:  xft:Source Code Pro:bold:italic:size=10
+!URxvt.font:            xft:Source Code Pro:size=10
+!URxvt.boldFont:        xft:Source Code Pro:bold:size=10
+!URxvt.italicfont:      xft:Source Code Pro:italic:size=10
+!URxvt.bolditalicFont:  xft:Source Code Pro:bold:italic:size=10
+URxvt.font:            xft:DejaVu Sans Mono for Powerline:size=11
+URxvt.boldFont:        xft:DejaVu Sans Mono for Powerline:bold:size=11
+URxvt.italicfont:      xft:DejaVu Sans Mono for Powerline:italic:size=11
+URxvt.bolditalicFont:  xft:DejaVu Sans Mono for Powerline:bold:italic:size=11
 
 ! URxvt my colors
 
@@ -222,7 +222,7 @@ XCalc.ShapeStyle:                      rectangle
 ! xterm ----------------------------------------------------------------------
 
 *vt100.faceName:       Source Code Pro
-*vt100.faceSize:       9
+*vt100.faceSize:       11
 *vt100.bellIsUrgent:   true
 *vt100.reverseVideo:   true
 *vt100.menuLocale:
@@ -230,3 +230,31 @@ XCalc.ShapeStyle:                      rectangle
 !*vt100.borderWidth:   0
 !*vt100.internalBorder: 0
 *vt100.borderColor:    Black
+
+xterm*foreground: 	DarkGray
+xterm*background: 	DarkBlue
+!xterm.color0:           S_base02
+!xterm.color1:           S_red
+!xterm.color2:           S_green
+!xterm.color3:           S_yellow
+xterm.color4:           RoyalBlue
+!xterm.color5:           S_magenta
+!xterm.color6:           S_cyan
+!xterm.color7:           S_base2
+!xterm.color9:           S_orange
+!xterm.color8:           S_base03
+!xterm.color10:          S_base01
+!xterm.color11:          S_base00
+xterm.color12:          RoyalBlue
+!xterm.color13:          S_violet
+!xterm.color14:          S_base1
+!xterm.color15:          S_base3
+
+! right hand side scrollbar...
+xterm*rightScrollBar: false
+xterm*ScrollBar: false
+
+! stop output to terminal from jumping down to bottom of scroll again
+xterm*scrollTtyOutput: false
+
+

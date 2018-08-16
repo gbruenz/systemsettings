@@ -5,9 +5,13 @@
 [credential "https://elagit.els.local"]
 	username = bruenzge
 
+[credential "https://cdgit.els.local"]
+	username = bruenzge
+
 [credential]
 #	helper = cache --timeout 28800
-        helper = store
+	helper = !pass-git-helper $@
+	useHttpPath = true
         
 [gui]
 	fontdiff = -family \"Source Code Pro\" -size 9 -weight normal -slant roman -underline 0 -overstrike 0
@@ -30,7 +34,7 @@
 [core]
 	excludesfile = /home/gert/.gitignore
 	preloadindex = true
-	editor = kate
+	editor = gedit
 [push]
 	default = upstream
 [branch "master"]
@@ -39,8 +43,19 @@
 	rebase = true
 [diff]
 	renames = copies
+	tool = meld
+[difftool]
+    	prompt = false
+[difftool "meld"]
+    	cmd = meld "$LOCAL" "$REMOTE"
 	
 [http]
-	sslVerify = true
+	sslverify = false
 [merge]
 	conflictstyle = diff3
+    	tool = meld
+[mergetool "meld"]
+    	# Choose one of these 2 lines (not both!) explained below.
+    	cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+    	cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
+
