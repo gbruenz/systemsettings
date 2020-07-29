@@ -9,19 +9,18 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-workspace 1 output eDP-1
-workspace 2 output DP-2
-workspace 3 output HDMI-3
-workspace 4 output eDP-1
-workspace 5 output DP-2
-workspace 6 output HDMI-3
-workspace 7 output eDP-1
-workspace 8 output DP-2
-workspace 9 output HDMI-3
-workspace_layout tabbed
-
 # run xrandr for specific screenlayout
-exec --no-startup-id ~/.screenlayout/office.sh
+exec --no-startup-id ~/.screenlayout/home.sh
+
+workspace 1 output DP-2
+workspace 2 output DP-3
+workspace 3 output DP-2
+workspace 4 output DP-3
+workspace 5 output DP-2
+workspace 6 output DP-3
+workspace 7 output DP-2
+workspace 8 output DP-3
+workspace_layout tabbed
 
 new_window none
 
@@ -53,9 +52,10 @@ for_window [window_role="pop-up"] floating enable border 1pixel
 for_window [class="Firefox" title="(Copying.*)|(Moving.*)|(Progress Dialog)"] floating enable border 1pixel
 #for_window [class="Dolphin" title="(Copying.*)|(Moving.*)|(Progress Dialog)"] floating enable border 1pixel
 #for_window [class="lxqt-config" title="(Configuration Center)"] floating enable  border normal
-for_window [class="Chromium"] move container to workspace 3
-for_window [class="Gnome-commander"] move container to workspace 2
 for_window [class="URxvt"] move container to workspace 1
+for_window [class="Chromium"] move container to workspace 2
+for_window [class="Gnome-commander"] move container to workspace 3
+for_window [class="Droidcam"] move container to workspace 4
 
 # start a terminal
 bindsym $mod+Return exec urxvt
@@ -76,6 +76,9 @@ bindsym $mod+c exec gnome-calculator
 # start browser
 #bindsym $mod+b exec chromium
 bindsym $mod+b exec firefox
+
+# start wireshark on eth0
+bindsym $mod+w exec wireshark -k -i eth0
 
 #bindsym Print exec ksnapshot
 #bindsym Shift+Print exec ksnapshot -c
@@ -120,7 +123,7 @@ bindsym $mod+f fullscreen
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+#bindsym $mod+w layout tabbed
 #bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -144,8 +147,6 @@ bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -156,8 +157,6 @@ bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -199,31 +198,25 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        output DP-2
-	output HDMI-3
-	tray_output none
+				output DP-3
+				tray_output none
         position top
-	mode hide
-	hidden_state hide
+				mode hide
+				hidden_state hide
 }
 bar {
-        output eDP-1
-        tray_output eDP-1
+        output DP-2
+        tray_output DP-2
         status_command i3status
         position top
 }
-#bar {
-#        output HDMI-3
-#	tray_output none
-#        position top
-#	mode hide
-#	hidden_state hide
-#}
 
 exec --no-startup-id xset s off
 exec --no-startup-id xsetroot -solid black
 #exec --no-startup-id bluedevil-monolithic
 exec --no-startup-id nm-applet
+exec --no-startup-id volumeicon
+exec --no-startup-id jetbrains-toolbox --minimize
 exec --no-startup-id xscreensaver -nosplash
 #exec --no-startup-id klipper
 #exec --no-startup-id dunst
@@ -232,9 +225,9 @@ exec --no-startup-id xautolock -time 10 -locker 'i3lock -i ~/Pictures/fujitsu.pn
 
 #exec --no-startup-id loffice --quickstart --nologo
 #exec --no-startup-id find "$HOME/Mountpoints/Home" 2>&1 >/dev/null
-
 exec --no-startup-id i3-msg 'exec urxvt -e byobu'
 exec --no-startup-id gnome-commander
 exec --no-startup-id chromium
+exec --no-startup-id droidcam
 exec --no-startup-id i3-msg 'restart'
 

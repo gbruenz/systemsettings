@@ -46,8 +46,10 @@ xmlformat () { xmllint --format "$1" | unexpand -t 2 --first-only; }
 alias jjar='java -jar'
 alias ifc='sudo ifconfig -a'
 alias ping='sudo ping'
+alias nping='sudo nping'
 alias wol='wakeonlan -f ~/.wol_macaddr'
 alias gg='gitg &'
+alias ws0='wireshark -k -i eth0'
 
 alias dmesg='sudo dmesg'
 
